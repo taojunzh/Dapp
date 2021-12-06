@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exchange Market</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- [if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif] -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Exchange Market</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <div class="row" id="address_div">
+          <div style="margin-left: 15px;margin-top: 10px;">
+            <span id='addresses'></span>
+            <!-- <span> Address : </span>
+            <select id="enter_address" value=""></select> -->
+          </div>
+        </div>
+        <div class="row">
+        <div class="col" id="register_div" style="margin-left: 15px;margin-top: 10px;">
+            <button class="btn btn-info" type="button" id="register">Register</button>
+          </div>
+        <div class="col" id="unregister_div" style="margin-left: 15px;margin-top: 10px;">
+              <button class="btn btn-info" type="button" id="unRegister">unRegister</button>
+          </div>
+          <div class="col" id="clean_div" style="margin-left: 15px;margin-top: 10px;">
+                <button class="btn btn-info" type="button" id="clean">Clean</button>
+            </div>
+        </div>
+      <div class="row" style="margin-top:30px;border-style: solid;border-width: thin;padding-bottom:15px;">
+        <div class="col" id="reqeustForCur_div" style="margin-left: 15px;margin-top: 10px;">
+              <label for="amount">Amount of currency you want:</label><br>
+              <input type="text" id="amountCur" name="amountCur" value=""><br><br>
+              <label for ="tok" > Amount of token for trade: </label><br>
+              <input type="text" id ="TOKtoCur" name ="TOKtoCur" value=""><br><br>
+              <label for ="desire" > Desire Currency(abbreviation): </label><br>
+              <input type="text" id ="kindofCur" name ="TOKtoCur" value=""><br><br>
+              <button class="btn btn-info" type="button" id="requestForCur">Request for Currency</button>
+        </div>
+        <div class="col" id="reqeustForToken_div" style="margin-left: 15px;margin-top: 10px;">
+            <label for="amount1">Amount of token you want:</label><br>
+            <input type="text" id="amountToken" name="amountToken" value=""><br><br>
+            <label for ="cur">Amount of currency for trade</label><br>
+           <input type="text" id ="CurtoTok" name ="TOKtoCur" value=""><br><br>
+            <label for ="desire" > Type of Currency(abbreviation): </label><br>
+            <input type="text" id ="kindofCur1" name ="TOKtoCur" value=""><br><br>
+            <button class="btn btn-info" type="button" id="requestForToken">Request for Token</button>
+      </div>
+    </div>
+    <div class="row" style="margin-top:30px;border-style: solid;border-width: thin;padding-bottom:15px;">
+        <div class="col" id="status_div" style="margin-left: 15px;margin-top: 10px;">
+            <button class="btn btn-info" type="button" id="getStatus">Get Your Status</button>
+        <br>
+        <label for="seeCurrency">Enter the index for your currency:</label><br>
+        <input type="text" id="seeCurrency" name="seeCurrency" value=""><br><br>
+        <button class="btn btn-info" type="button" id="seeCurrencyBut">See Currency at Index!</button>
+</div>
+        <div class="col" id="status"></div>
+
+    </div>
+    <div class="row" style="margin-top:30px;border-style: solid;border-width: thin;padding-bottom:15px;" >
+      <div class ="col", id = "reqDetail_div" style="margin-left: 15px;margin-top: 10px;">
+        <button class="btn btn-info" type="button" id="refresh-request">Refresh Requested Members</button>
+        <button class="btn btn-info" style="margin-top:5px;" type="button" id="cancel-request">Cancel Your Request</button>
+      </div>
+<div class="col" id="reqeustDetails_div" style="margin-left: 15px;margin-top: 10px;">
+      <label for="memAddress">Member Address:</label><br>
+      <input type="text" id="memAddress" name="memAddress" value=""><br><br>
+      <button class="btn btn-info" type="button" id="memAddressBut">See Request</button>
+      <button class="btn btn-info" type="button" id="HandlememAddressBut">Approve Request</button>
+</div>
+
+</div>
+<div  id="requests"></div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/dist/bootstrap.min.js"></script>
+    <script src="js/dist/web3.min.js"></script>
+    <script src="js/dist/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
